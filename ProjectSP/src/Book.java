@@ -5,7 +5,6 @@ public class Book {
 
     private String bookTitle;
     private List<Author> bookAuthors = new ArrayList<Author>();
-    private List<Chapter> bookChapters = new ArrayList<Chapter>();
     private List<Image> bookImages=new ArrayList<Image>();
     private List<Paragraph> bookParagraphs=new ArrayList<Paragraph>();
     private List<Table> bookTables = new ArrayList<Table>();
