@@ -9,6 +9,16 @@ public class Paragraph extends Element{
         this.textAlignment = textAlignment;
     }
 
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+
+
     public void setAlignStrategy(AlignStrategy strategy){
         this.textAlignment=strategy;
     }
@@ -32,5 +42,10 @@ public class Paragraph extends Element{
     @Override
     public Element get(Integer e) {
         return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 }

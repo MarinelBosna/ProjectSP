@@ -4,6 +4,18 @@ public class ImageProxy extends Element {
     private Dimension dim;
     private Image realImgage;
 
+    public ImageProxy(String imageOne) {
+        super();
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
     private  Image loadImage(){
         if(this.realImgage==null){
             this.realImgage=new Image(url);
@@ -30,5 +42,10 @@ public class ImageProxy extends Element {
     @Override
     public Element get(Integer e) {
         return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 }

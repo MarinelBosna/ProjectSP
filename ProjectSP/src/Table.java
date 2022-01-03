@@ -2,9 +2,16 @@ public class Table extends Element{
 
     private String tableTitle;
 
-
     public Table(String tableTitle){
         this.tableTitle=tableTitle;
+    }
+
+    public String getTitle() {
+        return tableTitle;
+    }
+
+    public void setTitle(String tableTitle) {
+        this.tableTitle = tableTitle;
     }
 
     public void print() {
@@ -26,4 +33,8 @@ public class Table extends Element{
         return null;
     }
 
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
 }
