@@ -12,6 +12,17 @@ public class Section extends Element {
         this.sectionTitle=sectionTitle;
     }
 
+    public void setTitle(String sectionTitle){
+        this.sectionTitle=sectionTitle;
+    }
+
+    public String getTitle()
+    {
+        return this.sectionTitle;
+    }
+
+
+
     @Override
     public void print() {
         System.out.println(this.sectionTitle);
@@ -33,5 +44,14 @@ public class Section extends Element {
     @Override
     public Element get(Integer e) {
         return this.layerElement.get(e);
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+
+        for(Element child:layerElement){
+            child.accept(visitor);
+        }
     }
 }

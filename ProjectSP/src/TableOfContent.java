@@ -26,4 +26,9 @@ public class TableOfContent extends Element{
     public Element get(Integer e) {
         return null;
     }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
 }
