@@ -59,7 +59,7 @@ public class GenerateToC implements Visitor {
     public void visit(Table table) {
         paragraphNumber++;
 
-        table.setTitle(table.getTitle()+"---"+this.paragraphNumber);
+        table.setTitle(table.getTitle()+" "+this.paragraphNumber);
         tableOfContent.add(table);
     }
 }

@@ -48,8 +48,8 @@ public class BookStatistics implements Visitor{
 
     public void printStatistics(){
         System.out.println("Book Statistics: ");
-        System.out.println("*** Number of images:"+this.imagesCounter);
-        System.out.println("*** Number of tables:"+this.tablesCounter);
-        System.out.println("*** Number of paragraphs:"+this.paragraphCounter);
+        System.out.println("Number of images:"+this.imagesCounter);
+        System.out.println("Number of tables:"+this.tablesCounter);
+        System.out.println("Number of paragraphs:"+this.paragraphCounter);
     }
 }
